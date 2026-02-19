@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LayoutWrapper from './components/layout/LayoutWrapper';
 import { Loader2 } from 'lucide-react';
 
