@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Colors extracted from City Paper Brand Identity */
+        /* Vivid Orange */
+        --primary: 33 100% 50%;
+        --primary-foreground: 0 0% 100%;
+
+        /* Deep Navy Blue */
+        --secondary: 218 100% 33%;
+        --secondary-foreground: 0 0% 100%;
+
+        /* Gold/Yellow Accent */
+        --accent: 45 100% 50%;
+        --accent-foreground: 218 100% 33%;
+
+        /* Neutrals */
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 45 100% 50%;
+
+        --radius: 1rem;
+        /* More rounded standard radius */
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-900 font-sans antialiased;
+        background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold tracking-tight;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
+    }
+
+    .glass-dark {
+        @apply bg-slate-900/80 backdrop-blur-lg border border-slate-800/50 shadow-xl;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600;
+    }
+
+    .text-gradient-blue {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-blue-600;
+    }
+}
