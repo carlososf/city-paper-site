@@ -1,3 +1,4 @@
+import { getAssetUrl } from '../../lib/utils';
 import { Facebook, Instagram, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
                     <div className="flex items-center gap-2 mb-4">
                         <div className="bg-white p-2 rounded-lg inline-block">
                             <img
-                                src="/logo.png"
+                                src={getAssetUrl('/logo.png')}
                                 alt="City Paper"
                                 className="h-12 w-auto object-contain"
                             />

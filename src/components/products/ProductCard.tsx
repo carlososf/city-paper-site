@@ -2,6 +2,7 @@ import { type Product } from '../../data/products';
 import { Button } from '../ui/Button';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { getAssetUrl } from '../../lib/utils';
 
 interface ProductCardProps {
     product: Product;
@@ -14,7 +15,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 {/* Image Area */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-white flex items-center justify-center p-4">
                     <img
-                        src={product.image}
+                        src={getAssetUrl(product.image)}
                         alt={product.name}
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"

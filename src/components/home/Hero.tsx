@@ -1,5 +1,6 @@
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { getAssetUrl } from '../../lib/utils';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ const Hero = () => {
             {/* Full Width Background Image with Blur */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/hero-main.png"
+                    src={getAssetUrl('/hero-main.png')}
                     alt="City Paper Background"
                     className="w-full h-full object-cover blur-[2px] scale-105" // scale-105 prevents blur edges
                 />

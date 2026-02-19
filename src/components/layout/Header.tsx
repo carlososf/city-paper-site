@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Download, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { cn } from '../../lib/utils';
+import { cn, getAssetUrl } from '../../lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
                     {/* Logo */}
                     <NavLink to="/" className="flex items-center gap-2 group">
                         <img
-                            src="/logo.png"
+                            src={getAssetUrl('/logo.png')}
                             alt="City Paper"
                             className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
                         />
